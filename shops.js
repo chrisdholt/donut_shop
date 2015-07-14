@@ -8,7 +8,7 @@ var Shop = function(shopName, avgNum, minCust, maxCust, hoursOpen) {
   this.hoursOpen = hoursOpen;
   this.hourly = [];
   this.averageCustomers = function (){
-  return Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.minCust;
+  return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
   }
 };
 
