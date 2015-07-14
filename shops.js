@@ -38,7 +38,7 @@ Shop.prototype.render = function() {
     rowData = rowData + "<td>" + this.avgHourly[j] + "</td>";
     console.log(rowData);
   }
-  addRow.innerHTML = rowData + "<td>"+ this.donutsPerDay() + "</td>";
+  addRow.innerHTML = rowData + "<td>" + this.donutsPerDay() + "</td>";
   tableSet.appendChild(addRow);
 };
 
