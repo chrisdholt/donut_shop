@@ -17,7 +17,7 @@ Shop.prototype.donutsPerHour = function() {
   return Math.floor(this.averageCustomers() * this.avgNum);
 };
 
-//calculate number donuts per day (number of hours is fixed!)
+//calculate number donuts per day
 Shop.prototype.donutsPerDay = function() {
   var totalPerDay = 0;
 
