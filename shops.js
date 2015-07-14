@@ -40,7 +40,7 @@ var header = (function() {
   var hdData = "<td><strong>" + "Locations" + "</strong></td>";
   for (var h=0; h < 11; h++) {
     var time = 700 + (h * 100);
-    hdData += "<td><strong>" + time + "</strong></td>";
+    hdData += "<td><strong>" + time + " Hours</strong></td>";
   }
   hdData += "<td><strong>" + "Totals" + "</strong></td>";
   tableSet.appendChild(newRow);
