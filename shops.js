@@ -12,12 +12,12 @@ var Shop = function(shopName, avgNum, minCust, maxCust, hoursOpen) {
   }
 };
 
-//calculate number donuts per hour
+//generates random number of donuts per hour by calling random custers and multiplying it by average donuts/customer.
 Shop.prototype.donutsPerHour = function() {
   return Math.floor(this.randCust() * this.avgNum);
 };
 
-//calculate number donuts per day
+//Runs loop to calculate number donuts per day based on the random donutsPerHour. Could also use: this.hourly[i] = (this.donutsPerHour());
 Shop.prototype.donutsPerDay = function() {
   var totalPerDay = 0;
 
@@ -48,7 +48,7 @@ var southLake = new Shop("South Lake Union", 6.33, 9, 23, 11);
 var wedgewood = new Shop("Wedgewood", 1.25, 2, 28, 11);
 var ballard = new Shop("Ballard", 3.75, 8, 58, 11);
 
-
+//Call it.
 downtown.render();
 capHill.render();
 southLake.render();
