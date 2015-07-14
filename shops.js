@@ -6,7 +6,7 @@ var Shop = function(shopName, avgNum, minCust, maxCust, hoursOpen) {
   this.minCust = minCust;
   this.maxCust = maxCust;
   this.hoursOpen = hoursOpen;
-  this.avgHourly = [];
+  this.hourly = [];
   this.averageCustomers = function (){
   return Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.minCust;
   }
@@ -23,7 +23,7 @@ Shop.prototype.donutsPerDay = function() {
 
   for (var i = 0; i < this.hoursOpen; i++) {
     totalPerDay += this.donutsPerHour();
-    this.avgHourly.push(this.donutsPerHour());
+    this.hourly.push(this.donutsPerHour());
   }
   return totalPerDay;
 };
@@ -32,10 +32,10 @@ Shop.prototype.render = function() {
   this.donutsPerDay();
   var addRow = document.createElement("tr");
   var tableSet = document.getElementById("table");
-  var rowData = "<td>" + this.shopName + "</td>";
+  var rowData = "<td><strong>" + this.shopName + "</strong></td>";
 
-  for (var j=0; j < this.avgHourly.length; j++) {
-    rowData = rowData + "<td>" + this.avgHourly[j] + "</td>";
+  for (var j=0; j < this.hourly.length; j++) {
+    rowData = rowData + "<td>" + this.hourly[j] + "</td>";
     console.log(rowData);
   }
   addRow.innerHTML = rowData + "<td>" + this.donutsPerDay() + "</td>";
