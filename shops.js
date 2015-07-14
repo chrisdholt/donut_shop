@@ -7,14 +7,14 @@ var Shop = function(shopName, avgNum, minCust, maxCust, hoursOpen) {
   this.maxCust = maxCust;
   this.hoursOpen = hoursOpen;
   this.hourly = [];
-  this.averageCustomers = function (){
+  this.randCust = function (){
   return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
   }
 };
 
 //calculate number donuts per hour
 Shop.prototype.donutsPerHour = function() {
-  return Math.floor(this.averageCustomers() * this.avgNum);
+  return Math.floor(this.randCust() * this.avgNum);
 };
 
 //calculate number donuts per day
