@@ -1,4 +1,3 @@
-'use strict'
 var Shop = function(shopName, avgNum, minCust, maxCust, hoursOpen) {
   this.shopName = shopName;
   this.avgNum = avgNum;
@@ -15,14 +14,21 @@ var Shop = function(shopName, avgNum, minCust, maxCust, hoursOpen) {
 
 Shop.prototype.render = function() {
   this.donutsPerDay();
-  var addRow = document.createElement("tr");
-  var rowData = "<td id=" + "'" + this.shopName + "'><strong>" + this.shopName + "</strong></td>";
-  for (var j=0; j < this.hourly.length; j++) {
-    rowData = rowData + "<td id=" + "'" + this.shopName + "'>" + this.hourly[j] + "</td>";
-    console.log(rowData);
+  if(document.getElementById(this.shopName)) {
+    var update = document.getElementById(this.shopName).childNodes;
+    for (var i=1; i < update.length-1; i++) {
+      update[i].innerHTML = this.hourly[i-1];
+    } } else {
+    var addRow = document.createElement("tr");
+    addRow.id = this.shopName;
+    var rowData = "<td><strong>" + this.shopName + "</strong></td>";
+    for (var j=0; j < this.hourly.length; j++) {
+      rowData = rowData + "<td>" + this.hourly[j] + "</td>";
+      console.log(rowData);
+    }
+    addRow.innerHTML = rowData + "<td>" + this.totalPerDay + "</td>";
+    tableSet.appendChild(addRow);
   }
-  addRow.innerHTML = rowData + "<td>" + this.totalPerDay + "</td>";
-  tableSet.appendChild(addRow);
 };
 
 //Runs loop to calculate number donuts per day based on the random donutsPerHour. Includes total Per Day in Math.random.
@@ -54,18 +60,16 @@ var header = (function() {
 var newShop = document.getElementById("newShop");
 newShop.addEventListener("submit", function(e) {
   e.preventDefault();
-
-  var elName = document.getElementById("shopName").value;
-  var elAvgNum = parseInt(document.getElementById("avgNum").value);
-  var elMinCust = parseInt(document.getElementById("minCust").value);
-  var elMaxCust = parseInt(document.getElementById("maxCust").value);
-  var elHours = parseInt(document.getElementById("openHours").value);
-
+  var elName, elAvgNum, elMinCust, elMaxCust, elHours;
+   elName = document.getElementById("shopName").value;
+   elAvgNum = parseInt(document.getElementById("avgNum").value);
+   elMinCust = parseInt(document.getElementById("minCust").value);
+   elMaxCust = parseInt(document.getElementById("maxCust").value);
+   elHours = parseInt(document.getElementById("openHours").value);
   var createShop = new Shop(elName, elAvgNum, elMinCust, elMaxCust, elHours);
   createShop.render();
 });
 
-//
 var downtown = new Shop("Downtown", 4.50, 8, 43, 11);
 var capHill = new Shop("Capitol Hill", 2, 4, 37, 11);
 var southLake = new Shop("South Lake Union", 6.33, 9, 23, 11);
@@ -78,3 +82,7 @@ capHill.render();
 southLake.render();
 wedgewood.render();
 ballard.render();
+
+
+
+
