@@ -7,8 +7,34 @@
  </head>
 
  <body>
-  <table border="1" style="width: 70%" id="tblBody">
-  </table>
+  <section>
+    <table border="1" style="width: 80%" id="tblBody">
+    </table>
+  </section>
+  <section>
+
+    <h2>Add A Store</h2>
+
+    <form id="newShop">
+      Shop Name: <br>
+      <input type="text" id="shopName" name="shopName" required>
+      <br>
+      Minimum Customers Per Day: <br>
+      <input type="text" step="any" id="minCust" name="minCust" required>
+      <br>
+      Maximum Customers Per Day: <br>
+      <input type="text" step="any" id="maxCust" name="maxCust" required>
+      <br>
+      Average # of Donuts Per customer:<br>
+      <input type="text" step="any" id="avgNum" name="avgNum" required>
+      <br>
+      Hours Open: <br>
+      <input type="text" id="openHours" name="openHours" placeholder="11">
+      <br>
+      <button type="submit" id="submitBtn" name="submit">Submit</button>
+    </form>
+  </section>
+
   <script src="shops.js"></script>
  </body>
 
