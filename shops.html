@@ -16,22 +16,28 @@
     <h2>Add A Store</h2>
 
     <form id="newShop">
-      Shop Name: <br>
-      <input type="text" id="shopName" name="shopName" required>
-      <br>
-      Minimum Customers Per Hour: <br>
-      <input type="text" step="any" id="minCust" name="minCust" required>
-      <br>
-      Maximum Customers Per Hour: <br>
-      <input type="text" step="any" id="maxCust" name="maxCust" required>
-      <br>
-      Average # of Donuts Per customer:<br>
-      <input type="text" step="any" id="avgNum" name="avgNum" required>
-      <br>
-      Hours Open: <br>
-      <input type="text" id="openHours" name="openHours" placeholder="11">
-      <br>
-      <button type="submit" id="submitBtn" name="submit">Submit</button>
+      <fieldset>
+        <label for="shopName">Shop Name:<label>
+        <br>
+        <input type="text" id="shopName" name="shopName" required>
+        <br>
+        <label for="minCust">Min Customers Per Hour:</label>
+        <br>
+        <input type="text" step="any" id="minCust" name="minCust" required>
+        <br>
+        <label for="maxCust">Max Customers Per Hour:<label>
+        <br>
+        <input type="text" step="any" id="maxCust" name="maxCust" required>
+        <br>
+        <label for="avgNum">Average # Donuts Per Customer: <label>
+        <br>
+        <input type="text" step="any" id="avgNum" name="avgNum" required>
+        <br>
+        <label for="openHours">Number of Hours Open: <label>        <br>
+        <input type="text" id="openHours" name="openHours" placeholder="11">
+        <br>
+        <button type="submit" id="submitBtn" name="submit">Submit</button>
+      </fieldset>
     </form>
   </section>
 
