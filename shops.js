@@ -1,3 +1,4 @@
+'use strict'
 var Shop = function(shopName, avgNum, minCust, maxCust, hoursOpen) {
   this.shopName = shopName;
   this.avgNum = avgNum;
@@ -6,7 +7,6 @@ var Shop = function(shopName, avgNum, minCust, maxCust, hoursOpen) {
   this.hoursOpen = hoursOpen;
   this.hourly = [];
   this.totalPerDay = 0
-  // this.createShop();
   this.randCust = function (){
   return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
   }
@@ -18,7 +18,9 @@ Shop.prototype.render = function() {
     var update = document.getElementById(this.shopName).childNodes;
     for (var i=1; i < update.length-1; i++) {
       update[i].innerHTML = this.hourly[i-1];
-    } } else {
+    }
+    update[update.length-1].innerHTML = this.totalPerDay;
+    } else {
     var addRow = document.createElement("tr");
     addRow.id = this.shopName;
     var rowData = "<td><strong>" + this.shopName + "</strong></td>";
@@ -34,8 +36,8 @@ Shop.prototype.render = function() {
 //Runs loop to calculate number donuts per day based on the random donutsPerHour. Includes total Per Day in Math.random.
 Shop.prototype.donutsPerDay = function() {
   for (var i = 0; i < this.hoursOpen; i++) {
-    this.totalPerDay += Math.floor(this.randCust() * this.avgNum);
     this.hourly.push(Math.floor(this.randCust() * this.avgNum));
+    this.totalPerDay += this.hourly[i];
   }
 };
 
@@ -54,9 +56,7 @@ var header = (function() {
   newRow.innerHTML = hdData;
 })();
 
-
 // Starting with events var newShop grabs the form // newShop.addEventListener("submit" - adds event listener looking for submit on form // the empty function is held inside the event listener, but could be outside. Reasoning Carl put inside was for scope. need to declare all variables for info on form. Then create a new shop (createShop) passing properties into SHOP constructor. Standard practice is adding listener to form when you submit.
-
 var newShop = document.getElementById("newShop");
 newShop.addEventListener("submit", function(e) {
   e.preventDefault();
