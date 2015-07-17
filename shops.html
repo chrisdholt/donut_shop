@@ -4,43 +4,74 @@
  <head>
   <meta charset="UTF-8">
   <title>Top Pot Donuts</title>
+  <link type="text/css" rel="stylesheet" href="css/normalize.css">
+  <link type="text/css" rel="stylesheet" href="css/stylesheet.css">
  </head>
 
  <body>
-  <section>
-    <table border="1" style="width: 80%" id="tblBody">
-    </table>
+  <header>
+    <h2 id="pageTitle">Page Title</h2>
+    <nav id="mainNav">
+      <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+      </ul>
+    </nav>
+  </header>
+  <div id="mainImage">
+    <div id="imageText">
+    <h1>Welcome</h1>
+    <button type="click" id="welcome" class="button">View Shops</button>
+    </div>
+  </div>
+  <section id="siteWrapper">
+    <main id="siteInner">
+      <h2>Top Pot Numbers</h2>
+      <section id="tblSection" class="section">
+        <table id="tblBody">
+        </table>
+      </section>
+
+      <div class="space"></div>
+
+      <div>
+        <section class="content">
+          <form id="newShop">
+            <fieldset>
+              <h2>Add A Store</h2>
+              <label for="shopName" class="formLabel">Shop Name:<label>
+              <br>
+              <input type="text" id="shopName" name="shopName" class="inputs" required>
+              <br>
+              <label for="minCust" class="formLabel">Min Customers Per Hour:</label>
+              <br>
+              <input type="text" step="any" id="minCust" name="minCust" class="inputs" required>
+              <br>
+              <label for="maxCust" class="formLabel">Max Customers Per Hour:<label>
+              <br>
+              <input type="text" step="any" id="maxCust" name="maxCust" class="inputs" required>
+              <br>
+              <label for="avgNum" class="formLabel">Average # Donuts Per Customer: <label>
+              <br>
+              <input type="text" step="any" id="avgNum" name="avgNum" class="inputs" required>
+              <br>
+              <label for="openHours" class="formLabel"># Hours Open: <label>        <br>
+              <input type="text" id="openHours" name="openHours" class="inputs" placeholder="11">
+              <br>
+              <button type="submit" id="submitBtn" name="submit">Submit</button>
+            </fieldset>
+          </form>
+          <h2>Adding Content</h2>
+          <p>Objectively unleash maintainable paradigms rather than visionary outsourcing. Authoritatively recaptiualize team driven applications without wireless information. Phosfluorescently empower progressive paradigms without revolutionary quality vectors. Dramatically initiate one-to-one platforms via unique architectures. Seamlessly architect low-risk high-yield applications whereas value-added channels.</p>
+          <br>
+          <h2>More Content</h2>
+          <p>Phosfluorescently empower progressive paradigms without revolutionary quality vectors. Dramatically initiate one-to-one platforms via unique architectures. Seamlessly architect low-risk high-yield applications whereas value-added channels.</p>
+        </section>
+      </div>
+    </main>
   </section>
-  <section>
-
-    <h2>Add A Store</h2>
-
-    <form id="newShop">
-      <fieldset>
-        <label for="shopName">Shop Name:<label>
-        <br>
-        <input type="text" id="shopName" name="shopName" required>
-        <br>
-        <label for="minCust">Min Customers Per Hour:</label>
-        <br>
-        <input type="text" step="any" id="minCust" name="minCust" required>
-        <br>
-        <label for="maxCust">Max Customers Per Hour:<label>
-        <br>
-        <input type="text" step="any" id="maxCust" name="maxCust" required>
-        <br>
-        <label for="avgNum">Average # Donuts Per Customer: <label>
-        <br>
-        <input type="text" step="any" id="avgNum" name="avgNum" required>
-        <br>
-        <label for="openHours">Number of Hours Open: <label>        <br>
-        <input type="text" id="openHours" name="openHours" placeholder="11">
-        <br>
-        <button type="submit" id="submitBtn" name="submit">Submit</button>
-      </fieldset>
-    </form>
-  </section>
-
   <script src="shops.js"></script>
  </body>
 
