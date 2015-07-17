@@ -157,11 +157,10 @@ td {
   font-family: "Pontano Sans", Sans-serif;
   font-weight: 100;
   font-size: 100%;
-  text-align: left;
+  text-align: center;
   color: #5a5854;
   background-color: #f2f2f2;
   border-radius: 5px;
-  padding: 5px 5px 5px 30px;
   margin-bottom: 10px;
 }
 
@@ -179,6 +178,10 @@ td {
   height: 350px;
   position: relative;
   border: none !important;
+}
+
+#welcome:hover {
+
 }
 
 .footer {
