@@ -49,6 +49,10 @@ p {
   color: white;
 }
 
+#pageTitle:hover {
+  color: #A9C7CF;
+}
+
 #mainNav {
   position: relative;
   width: 70%;
