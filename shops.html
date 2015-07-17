@@ -4,24 +4,85 @@
  <head>
   <meta charset="UTF-8">
   <title>Top Pot Donuts</title>
+  <link type="text/css" rel="stylesheet" href="css/normalize.css">
+  <link type="text/css" rel="stylesheet" href="css/stylesheet.css">
+  <link href='http://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
  </head>
 
  <body>
-  <table border="1" style="width: 50%" id="table">
-    <th>Location</th>
-    <th>7:00AM</th>
-    <th>8:00AM</th>
-    <th>9:00AM</th>
-    <th>10:00AM</th>
-    <th>11:00AM</th>
-    <th>12:00AM</th>
-    <th>1:00PM</th>
-    <th>2:00AM</th>
-    <th>3:00AM</th>
-    <th>4:00AM</th>
-    <th>5:00AM</th>
-    <th>Total</th>
-  </table>
+  <header>
+    <logo id="pageTitle">Top Pot Donuts</logo>
+    <nav id="mainNav">
+      <ul>
+        <li>Maple Bar</li>
+        <li>Old Fashioned</li>
+        <li>Coffee</li>
+        <li>Golden Tate</li>
+      </ul>
+    </nav>
+  </header>
+  <div id="mainImage">
+    <div id="imageText">
+    <a href="#nuts"><img src="images/topPot.gif" id="welcome" class="welcome1"></a>
+    <h1>SHOW ME THE 'NUTS</h1>
+    </div>
+  </div>
+  <section id="siteWrapper">
+    <main id="siteInner">
+      </a><h2>We're Proud of Our Donuts</h2>
+      <p>Compellingly cultivate economically sound leadership skills without business core competencies. Monotonectally empower superior mindshare without highly efficient potentialities. <a id="#nuts" name="nuts">Credibly leverage existing bleeding-edge markets before superior partnerships. Dynamically reinvent ubiquitous web-readiness without end-to-end meta-services. Enthusiastically transition leading-edge growth strategies after exceptional e-commerce.</p>
+      <br>
+      <h2>We Make A Lot Of 'Nuts</h2>
+      <section id="tblSection" class="section">
+        <table id="tblBody">
+        </table>
+      </section>
+
+      <div class="space"></div>
+
+      <div>
+        <section class="content">
+          <form id="newShop">
+            <fieldset>
+              <h2>Add A Store</h2>
+              <label for="shopName" class="formLabel">Shop Name:<label>
+              <br>
+              <input type="text" id="shopName" name="shopName" class="inputs" required>
+              <br>
+              <label for="minCust" class="formLabel">Min Customers Per Hour:</label>
+              <br>
+              <input type="text" step="any" id="minCust" name="minCust" class="inputs" required>
+              <br>
+              <label for="maxCust" class="formLabel">Max Customers Per Hour:<label>
+              <br>
+              <input type="text" step="any" id="maxCust" name="maxCust" class="inputs" required>
+              <br>
+              <label for="avgNum" class="formLabel">Average # Donuts Per Customer: <label>
+              <br>
+              <input type="text" step="any" id="avgNum" name="avgNum" class="inputs" required>
+              <br>
+              <label for="openHours" class="formLabel"># Hours Open: <label>        <br>
+              <input type="text" id="openHours" name="openHours" class="inputs" placeholder="11">
+              <br>
+              <button type="submit" id="submitBtn" class="sbtForm" name="submit">Submit</button>
+            </fieldset>
+          </form>
+          <h2>Adding Content</h2>
+          <p>Objectively unleash maintainable paradigms rather than visionary outsourcing. Authoritatively recaptiualize team driven applications without wireless information. Phosfluorescently empower progressive paradigms without revolutionary quality vectors. Dramatically initiate one-to-one platforms via unique architectures. Seamlessly architect low-risk high-yield applications whereas value-added channels.</p>
+          <br>
+          <h2>More Content</h2>
+          <p>Phosfluorescently empower progressive paradigms without revolutionary quality vectors. Dramatically initiate one-to-one platforms via unique architectures. Seamlessly architect low-risk high-yield applications whereas value-added channels.</p>
+          <p>Assertively reconceptualize proactive resources and performance based deliverables. Dramatically drive vertical web services whereas diverse services. Synergistically productivate 24/7 meta-services through intermandated information. Distinctively envisioneer wireless leadership skills with efficient content. Holisticly innovate highly efficient platforms after. Courtesy of "Corporate Ipsum".</p>
+        </section>
+      </div>
+    </main>
+  </section>
+  <footer id="footer" class="footer">
+    <h3>"We make great fucking donuts and drive Code Fellows students crazy."
+      <br> - Our Badass CEO</h3>
+  </footer>
   <script src="shops.js"></script>
  </body>
 
