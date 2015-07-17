@@ -1,0 +1,202 @@
+body {
+  margin: 0 auto;
+  width: 100%;
+}
+
+header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  margin: 0px;
+  height: 70px;
+  z-index: 100;
+  padding: 10px;
+  background-color: #C75A57;
+  width: 100%;
+}
+
+h1 {
+  font-family: "Bevan", Serif;
+  font-weight: 400;
+  font-size: 3.5em;
+  color: white;
+}
+
+h2 {
+  font-family: "Bevan", Serif;
+  font-size: 1.5em;
+}
+
+h3 {
+  margin: 1.5em;
+  font-family: "Bevan", Cursive;
+}
+
+p {
+  font-family: "Pontano Sans", Sans-serif;
+}
+
+#pageTitle {
+  position: relative;
+  float:left;
+  padding-left:.7em;
+  padding-top: 10px;
+  font-family: "Bevan", Serif;
+  font-size: 1.5em;
+  color: white;
+}
+
+#pageTitle:hover {
+  color: #A9C7CF;
+}
+
+#mainNav {
+  position: relative;
+  width: 70%;
+  float: right;
+  text-align: right;
+  padding-right: 3.0em;
+}
+
+
+li {
+  display: inline;
+  padding: .5em;
+  font-family: "Bevan", Serif;
+  color: white;
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: #A9C7CF;
+}
+
+
+#mainImage {
+/*  background-image: url("../images/main_image.jpg");*/
+  width: 100%;
+  background-color: #C75A57;
+  background-repeat: no-repeat;
+  height: 650px;
+}
+
+#imageText {
+  text-align: center;
+  padding: 100px;
+}
+
+#siteWrapper {
+  display: block;
+  background-color: #A9C7CF;
+  width: 100%;
+}
+
+#siteInner {
+  display: inline-block;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.section {
+  border-radius: 40px;
+  padding: 20px;
+  background-color: white;
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  padding: .75em;
+  font-family: "Droid Sans", Sans-serif;
+  text-align: center;
+}
+
+.content {
+  position: relative;
+  display: inline;
+  width: 100%;
+  float: left;
+  clear: right;
+  padding-top: 40px;
+}
+
+form {
+  padding-right: -10px;
+  text-align: right;
+  float: right;
+  clear: left;
+  display: inline;
+  width: 35%;;
+}
+
+fieldset {
+  display: inline-block;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: white;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+.formLabel {
+  font-family: "Bevan", Serif;
+  font-size: 95%;
+  text-align: center;
+}
+
+.inputs {
+  font-family: "Pontano Sans", Sans-serif;
+  font-weight: 100;
+  font-size: 100%;
+  text-align: center;
+  color: #5a5854;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+
+.sbtForm {
+  width: 250px;
+  height: 50px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #C75A57;
+  color: #ffffff;
+  font-family: "Bevan", Serif;
+  font-size: 1.7em;
+  font-variant: small-caps;
+  letter-spacing: .2em;
+}
+
+.sbtForm:hover{
+  background-color: #A9C7CF;
+  color: #C75A57;
+}
+
+#welcome {
+  width: 350px;
+  height: 350px;
+  position: relative;
+  border: none !important;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  height:75px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
