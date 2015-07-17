@@ -36,9 +36,6 @@ p {
   font-family: "Pontano Sans", Sans-serif;
 }
 
-#space {
-  display: inline-block;
-}
 #pageTitle {
   position: relative;
   float:left;
@@ -182,10 +179,6 @@ td {
   height: 350px;
   position: relative;
   border: none !important;
-}
-
-#welcome:hover {
-
 }
 
 .footer {
