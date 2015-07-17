@@ -65,6 +65,15 @@ li {
   color: white;
 }
 
+li a {
+  color: white;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: #A9C7CF;
+}
+
 #mainImage {
 /*  background-image: url("../images/main_image.jpg");*/
   width: 100%;
@@ -80,7 +89,7 @@ li {
 
 #siteWrapper {
   display: block;
-  background-color: rgba(169,199,207, 1.0);
+  background-color: #A9C7CF;
   width: 100%;
 }
 
@@ -170,7 +179,6 @@ td {
   height: 350px;
   position: relative;
   border: none !important;
-/*  background-image: url("../images/topPot.gif");*/
 }
 
 .footer {
@@ -189,9 +197,14 @@ td {
   border: none;
   border-radius: 20px;
   background-color: #C75A57;
-  color: white;
+  color: #ffffff;
   font-family: "Bevan", Serif;
   font-size: 1.7em;
   font-variant: small-caps;
   letter-spacing: .2em;
+}
+
+.sbtForm:hover{
+  background-color: #A9C7CF;
+  color: #C75A57;
 }
