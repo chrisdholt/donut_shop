@@ -48,8 +48,14 @@ var header = (function() {
   var newRow = document.createElement("tr");
   var hdData = "<td><strong>" + "Locations" + "</strong></td>";
   for (var h=0; h < 11; h++) {
-    var time = 700 + (h * 100);
-    hdData += "<td><strong>" + time + " Hours</strong></td>";
+    var time = 7 + (h);
+    if (h<5) {
+      hdData += "<td><strong>" + time + ":00a</strong></td>"
+    } else if (h===5) {
+      hdData += "<td><strong>" + time + ":00p</strong></td>"
+    } else {
+      hdData += "<td><strong>" + (time-12) + ":00p</strong></td>";
+    }
   }
   hdData += "<td><strong>" + "Totals" + "</strong></td>";
   tableSet.appendChild(newRow);
