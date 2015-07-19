@@ -23,12 +23,12 @@ Shop.prototype.render = function() {
     } else {
     var addRow = document.createElement("tr");
     addRow.id = this.shopName;
-    var rowData = "<td><strong>" + this.shopName + "</strong></td>";
+    var rowData = '<td><strong>' + this.shopName + '</strong></td>';
     for (var j=0; j < this.hourly.length; j++) {
-      rowData = rowData + "<td>" + this.hourly[j] + "</td>";
+      rowData = rowData + '<td>' + this.hourly[j] + '</td>';
       console.log(rowData);
     }
-    addRow.innerHTML = rowData + "<td>" + this.totalPerDay + "</td>";
+    addRow.innerHTML = rowData + '<td>' + this.totalPerDay + '</td>';
     tableSet.appendChild(addRow);
   }
 };
@@ -89,6 +89,10 @@ southLake.render();
 wedgewood.render();
 ballard.render();
 
+//Function to reset z-index of logo, allowing it to slide under header after drop.
 
-
-
+function zIndex() {
+  var index;
+  index = document.getElementById("welcome");
+  index.className = "welcome2";
+}

@@ -33,7 +33,10 @@ p {
   font-family: "Pontano Sans", Sans-serif;
 }
 
-
+tr:hover {
+  background-color: #C75A57;
+  color: #ffffff;
+}
 
 /*============ PAGE TITLE STYLES ============*/
 #pageTitle {
@@ -61,20 +64,38 @@ p {
 }
 
 
-li {
+.navLink {
   display: inline;
   padding: .5em;
   font-family: "Bevan", Serif;
   color: white;
 }
 
-li a {
+
+.underline {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 3px;
   color: white;
   text-decoration: none;
 }
 
-li a:hover {
+.underline:hover {
   color: #A9C7CF;
+}
+
+.underline:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  background: transparent;
+  transition: width .3s ease, background-color .3s ease;
+}
+.underline:hover:after {
+  width: 100%;
+  background: #A9C7CF;
 }
 
 /*============ MAIN IMAGE STYLES ============*/
@@ -92,21 +113,38 @@ li a:hover {
   border: none !important;
   cursor: pointer;
   display: inline-block;
-  webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  webkit-transform;
-  transition-property: transform;
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  animation: drop 1s linear forwards;
 }
 
-#welcome:hover {
-  -webkit-transform: scale(1.2)
-  rotate(90deg);
-  -ms-transform: scale(1.2)
-  rotate(90deg);
-  transform: scale(1.2) rotate(90deg);
+.drop {
+  z-index: 101;
+}
+
+.welcome2 {
+  z-index: 5;
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0%;
+    transform: translateY(-1000px) scaleX(1) scaleY(1);
+  }
+  65% {
+    opacity: 1;
+    transform: translateY(0) scaleX(1) scaleY(1);
+  }
+  70% {
+    transform: translateY(20%) scaleX(1.4) scaleY(.6);
+  }
+  80% {
+    transform: translateY(-10%) scaleX(.8) scaleY(1.2);
+  }
+  90% {
+    transform: translateY(5%) scaleX(1.1) scaleY(.9);
+  }
+  100% {
+    transform: translateY(0) scaleX(1) scaleY(1);
+  }
 }
 
 #imageText {
@@ -154,8 +192,8 @@ td {
   min-width: 30%;
   max-width: 100%;
   padding: .75em;
-  font-family: "Droid Sans", Sans-serif;
   font-size: .95em;
+  cursor: default;
 }
 
 .content {
@@ -199,7 +237,7 @@ td {
   clear: right;
   padding: 5px;
   border-radius: 20px;
-  margin-top: 40px;
+  margin-top: 2%;
 }
 
 .coffee {
@@ -286,6 +324,4 @@ fieldset {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   -transform: scale(1.2);
-
 }
-
