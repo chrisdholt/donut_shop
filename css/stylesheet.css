@@ -315,13 +315,79 @@ fieldset {
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
+
+}
+
+.grow {
   -webkit-transition-duration: 0.8s;
   -webkit-transition-timing-function: ease;
 }
 
-.footer:hover {
-  box-shadow: inset 2 2 2 10px;
+.grow:hover {
+    box-shadow: inset 2 2 2 10px;
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   -transform: scale(1.2);
+}
+
+/*============ SOCIAL STYLES ============*/
+#socialBar {
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  background: #fff;
+  background-attachment: fixed;
+}
+#socialBar .social{
+  margin-top: 0px;
+  margin-right: 5px;
+}
+#socialBar .social li{
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  margin:0px 3px;
+}
+#socialBar .social li a{
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  color:#FFF;
+  padding: 10px 11px 12px;
+  font-size: 24px;
+/*   background: #3498db; */
+  background: #C75A57;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  border-radius: 150px;
+  z-index:1;
+}
+#socialBar .social li a:before{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background:#A9C7CF;
+  z-index: -1;
+  top:0%;
+  left:0%;
+  border-radius: 147px;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+#socialBar .social a:hover:before{
+  transform:scale(1.5);
+  opacity: 0;
+  -webkit-transition: 0.7s all ease;
+  transition: 0.7s all ease;
+}
+#socialBar .wrapper-1{
+  font-size: 14px;
+  color: #fff;
+  line-height:50px;
+  font-weight: 300;
+  float: left;
+  margin-left: 15px;
 }
