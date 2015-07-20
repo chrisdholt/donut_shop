@@ -273,8 +273,9 @@ td {
   display: inline;
   float:left;
   clear: right;
+  padding-top: 1.5%;
   padding-right: 2%;
-  max-width: 20%;
+  max-width: 15%;
 }
 
 
