@@ -253,11 +253,14 @@ td {
   position: relative;
   display: inline;
   max-width: 100%;
-  float: left;
-  clear: right;
-  padding: .5%;
+  float: right;
+  clear: left;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-bottom: 2%;
   border-radius: 20px;
-  margin-top: 2%;
+  background: white;
+  margin-top: 4%;
 }
 
 #doughnuts {
